@@ -8,7 +8,7 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 
 
 @SuppressWarnings("deprecation")
-public class TrackChange_webDriverListener implements WebDriverEventListener{
+public class webDriverListener02_TrackChange implements WebDriverEventListener{
 
 	public void afterAlertAccept(WebDriver driver) {
 		System.out.println(1);

@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.Test;
 
-public class webDriverListener {
+public class webDriverListener01 {
 
 	WebDriver driver;
 	JavascriptExecutor js;
@@ -21,7 +21,7 @@ public class webDriverListener {
 		System.setProperty("webdriver.chrome.driver", "C:/Users/Shree/Desktop/jar/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		EventFiringWebDriver eventdriver = new EventFiringWebDriver(driver);
-		TrackChange_webDriverListener trackchange = new TrackChange_webDriverListener();
+		webDriverListener02_TrackChange trackchange = new webDriverListener02_TrackChange();
 		
 		eventdriver.register(trackchange);
 		
