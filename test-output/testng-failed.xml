@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="tests" name="FirefoxTest(failed)">
-    <parameter name="browser" value="Firefox"/>
+  <test thread-count="2" parallel="tests" name="MicroSoftEdge_Test(failed)">
+    <parameter name="browser" value="Edge"/>
     <classes>
       <class name="com.Bookstation.Bookstation_login">
         <methods>
@@ -12,17 +12,5 @@
         </methods>
       </class> <!-- com.Bookstation.Bookstation_login -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
-  <test thread-count="2" parallel="tests" name="ChromeTest(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.Bookstation.Bookstation_login">
-        <methods>
-          <include name="test01"/>
-          <include name="test02"/>
-          <include name="lauch_browser"/>
-        </methods>
-      </class> <!-- com.Bookstation.Bookstation_login -->
-    </classes>
-  </test> <!-- ChromeTest(failed) -->
+  </test> <!-- MicroSoftEdge_Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -20,22 +20,19 @@ public class pract02 {
 
 	@Test
 		public void udemytest() throws Exception{
+		
+		ChromeOptions opt = new ChromeOptions();
+		opt.addArguments("incognito");
+		opt.addArguments("start-maximized");
+		
 			System.setProperty("webdriver.chrome.driver", "C:/Users/Shree/Desktop/jar/chromedriver.exe");
-			WebDriver driver = new ChromeDriver();
-			driver.get("file:///C:/Users/Shree/Desktop/data/Omkar%20Training/Offline%20Website/Offline%20Website/pages/examples/logout.html");
-			driver.manage().window().maximize();
+			
+			WebDriver driver = new ChromeDriver(opt);
+			driver.get("https://www.amazon.in/ref=nav_logo");
+			//driver.manage().window().maximize();
 			
 
-			WebElement logo = driver.findElement(By.xpath("//button"));
 			
-			TakesScreenshot ts = (TakesScreenshot)driver;
-			File src = logo.getScreenshotAs(OutputType.FILE);
-			File dest = new File("logo.png");
-			FileUtils.copyFile(src, dest);
-			
-			 driver.switchTo().newWindow(WindowType.WINDOW);
-			   driver.navigate().to("https://www.crmpro.com/");
-}
 
-	
+	}
 }

@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Bookstation.Bookstation_login">
+      <class name="demoqa.amazon">
         <methods>
-          <include name="test01"/>
-          <include name="lauch_browser"/>
+          <include name="addProduct"/>
         </methods>
-      </class> <!-- com.Bookstation.Bookstation_login -->
+      </class> <!-- demoqa.amazon -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
