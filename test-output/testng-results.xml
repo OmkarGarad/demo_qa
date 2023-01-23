@@ -2,15 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-18T12:02:23 IST" name="Default suite" finished-at="2023-01-18T12:02:30 IST" duration-ms="6975">
+  <suite started-at="2023-01-18T13:04:44 IST" name="Default suite" finished-at="2023-01-18T13:04:58 IST" duration-ms="13806">
     <groups>
     </groups>
-    <test started-at="2023-01-18T12:02:23 IST" name="Default test" finished-at="2023-01-18T12:02:30 IST" duration-ms="6975">
+    <test started-at="2023-01-18T13:04:44 IST" name="Default test" finished-at="2023-01-18T13:04:58 IST" duration-ms="13806">
       <class name="NOV_Practice.pract02">
-        <test-method signature="udemytest()[pri:0, instance:NOV_Practice.pract02@229c6181]" started-at="2023-01-18T12:02:24 IST" name="udemytest" finished-at="2023-01-18T12:02:30 IST" duration-ms="6915" status="PASS">
+        <test-method is-config="true" signature="startreport()[pri:0, instance:NOV_Practice.pract02@2034b64c]" started-at="2023-01-18T13:04:44 IST" name="startreport" finished-at="2023-01-18T13:04:45 IST" duration-ms="354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startreport -->
+        <test-method signature="udemytest()[pri:0, instance:NOV_Practice.pract02@2034b64c]" started-at="2023-01-18T13:04:45 IST" name="udemytest" finished-at="2023-01-18T13:04:58 IST" duration-ms="12831" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- udemytest -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:NOV_Practice.pract02@2034b64c]" started-at="2023-01-18T13:04:58 IST" name="endTest" finished-at="2023-01-18T13:04:58 IST" duration-ms="569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endTest -->
       </class> <!-- NOV_Practice.pract02 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
