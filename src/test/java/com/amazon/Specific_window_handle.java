@@ -1,4 +1,4 @@
-package com.makeMyTrip;
+package com.amazon;
 
 import java.sql.Driver;
 import java.util.ArrayList;

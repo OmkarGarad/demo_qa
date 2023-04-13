@@ -1,4 +1,4 @@
-package demoqa;
+package com.udemy;
 
 import java.awt.RenderingHints.Key;
 import java.time.Duration;

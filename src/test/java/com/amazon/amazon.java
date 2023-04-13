@@ -1,4 +1,4 @@
-package demoqa;
+package com.amazon;
 
 import java.time.Duration;
 import java.util.Iterator;
@@ -12,6 +12,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -27,9 +28,13 @@ public class amazon {
 		
 		@Test(priority=1)
 		public void initiazieBrowser()
+		
+		
 		{
-			WebDriverManager.chromedriver().setup();
-			driver=new ChromeDriver();
+			
+		
+			WebDriverManager.firefoxdriver().clearDriverCache().setup();
+			driver=new FirefoxDriver();
 			driver.get("https://www.amazon.in/ref=nav_logo");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

@@ -1,4 +1,4 @@
-package demoqa;
+package captcha_read_write;
 
 
 import java.awt.image.BufferedImage;

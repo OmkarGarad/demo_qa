@@ -23,7 +23,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class pract02 {
+public class extent_report {
 	
 	static ExtentReports report;
 	static ExtentTest test;

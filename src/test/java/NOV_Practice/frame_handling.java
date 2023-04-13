@@ -31,7 +31,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Test_Nov {
+public class frame_handling {
 	
 	
 	WebDriver driver;

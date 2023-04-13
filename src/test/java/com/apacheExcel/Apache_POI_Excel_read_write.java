@@ -1,4 +1,4 @@
-package demoqa;
+package com.apacheExcel;
 
 import java.io.FileInputStream;
 
@@ -68,6 +68,7 @@ public class Apache_POI_Excel_read_write {
 	public void test01() throws Exception {
 		System.setProperty("webdriver.chrome.driver", "C:/Users/Shree/Desktop/jar/chromedriver.exe" );
 		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
 		for(int i=1;i<7;i++){
 		driver.get("C:/Users/Shree/Desktop/data/Omkar Training/Offline Website/Offline Website/index.html");
 		driver.findElement(By.id("email")).sendKeys(read_cell(i, 0));

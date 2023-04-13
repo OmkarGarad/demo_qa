@@ -1,9 +1,12 @@
-package demoqa;
+package com.demoqa;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.security.Key;
+import java.util.concurrent.ConcurrentHashMap.KeySetView;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -31,12 +34,13 @@ public class Action {
 	act.moveToElement(move);
 	act.contextClick().build().perform();
 	
-	Robot robot = new Robot();
-	robot.keyPress(KeyEvent.VK_DOWN);
-	robot.keyPress(KeyEvent.VK_DOWN);
-	robot.keyRelease(KeyEvent.VK_DOWN);
-	robot.keyPress(KeyEvent.VK_ENTER);
-	robot.keyRelease(KeyEvent.VK_ENTER);
+	act.sendKeys("C");
+	
+	/*
+	 * Robot robot = new Robot(); robot.keyPress(KeyEvent.VK_DOWN);
+	 * robot.keyPress(KeyEvent.VK_DOWN); robot.keyRelease(KeyEvent.VK_DOWN);
+	 * robot.keyPress(KeyEvent.VK_ENTER); robot.keyRelease(KeyEvent.VK_ENTER);
+	 */
 	//act.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
 
 }

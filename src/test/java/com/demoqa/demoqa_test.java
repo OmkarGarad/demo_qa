@@ -1,4 +1,4 @@
-package demoqa;
+package com.demoqa;
 
 import java.awt.AWTException;
 import java.awt.Robot;

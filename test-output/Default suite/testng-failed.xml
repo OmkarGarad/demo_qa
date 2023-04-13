@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="demoqa.amazon">
+      <class name="com.makeMyTrip.makeMyTrip">
         <methods>
-          <include name="addProduct"/>
+          <include name="close_addvertisement"/>
         </methods>
-      </class> <!-- demoqa.amazon -->
+      </class> <!-- com.makeMyTrip.makeMyTrip -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

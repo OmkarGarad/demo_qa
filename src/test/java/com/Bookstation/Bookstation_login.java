@@ -20,12 +20,16 @@ import org.openqa.selenium.support.locators.RelativeLocator;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.beust.jcommander.Parameter;
+import com.demoqa.Action;
+
 import NOV_Practice.properties_data;
-import demoqa.Action;
 
 public class Bookstation_login {
 
@@ -33,7 +37,9 @@ public class Bookstation_login {
 	WebDriverWait wait;
 	Actions act;
 	
-
+	// This Test can Run by TestNG.xml 
+	// here we used parameterization or multiple cross browser
+	
 	@BeforeTest
 	@Parameters("browser")
 	public void lauch_browser(String browser) throws Throwable {
@@ -92,6 +98,10 @@ public class Bookstation_login {
 		 
 	}
 
+	@AfterTest
+	public void end() {
+		driver.quit();
+	}
 
 	
 

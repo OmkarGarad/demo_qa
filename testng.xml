@@ -13,8 +13,6 @@
   <run>
   <include name="demoqa.Action"></include>
   <include name="demoqa.amazon"></include>
-  
-  
   </run>
   </groups> -->
     <classes>
@@ -23,7 +21,7 @@
 
     </classes>
     
-  </test> <!-- Test -->
+  </test> 
   
    <test thread-count="5" name="FirefoxTest">
    <parameter name="browser" value="Firefox"></parameter>
@@ -32,7 +30,7 @@
       <class name="com.Bookstation.Bookstation_login"/>
 
     </classes>
-  </test> <!-- Test -->
+  </test> 
   
   
    <test thread-count="5" name="MicroSoftEdge_Test">
@@ -42,7 +40,7 @@
       <class name="com.Bookstation.Bookstation_login"/>
 
     </classes>
-  </test> <!-- Test -->
+  </test> 
   
   
-</suite> <!-- Suite -->
+</suite> 

@@ -16,7 +16,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -31,30 +33,36 @@ public class makeMyTrip {
 	JavascriptExecutor js;
 	WebDriver driver;
 
-/*	@BeforeMethod
-	public void before() {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.makemytrip.com/");
-		;
-		driver.manage().window().maximize();
+	/*
+	 * @BeforeMethod public void before() {
+	 * 
+	 * ChromeOptions options = new ChromeOptions();
+	 * options.addArguments("--remote-allow-origins=*");
+	 * System.setProperty("webdriver.chrome.driver",
+	 * "C:/Users/Shree/Desktop/jar/chromedriver.exe"); WebDriver driver = new
+	 * ChromeDriver(options); driver.navigate().to("https://www.makemytrip.com/"); ;
+	 * driver.manage().window().maximize();
+	 * 
+	 * }
+	 * 
+	 * @AfterMethod public void after(){ driver.close(); }
+	 */
 
-	}
-	
-	@AfterMethod
-	public void after(){
-		driver.close();
-	}
-*/
 	@Test(priority=1)
 	public void loginpage() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.makemytrip.com/");
-		;
-		driver.manage().window().maximize();
+		
+		/*
+		 * ChromeOptions options = new ChromeOptions();
+		 * options.addArguments("--remote-allow-origins=*");
+		 * System.setProperty("webdriver.chrome.driver",
+		 * "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		 * WebDriver driver = new ChromeDriver(options);
+		 * driver.navigate().to("https://www.makemytrip.com/"); ;
+		 * driver.manage().window().maximize();
+		 */
+		 
+		
+		
 		// click on login and create account
 
 		driver.findElement(By.xpath("//li[@data-cy='account']")).click();
@@ -70,12 +78,22 @@ public class makeMyTrip {
 
 	@Test(priority=2)
 	public void currencypage() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.makemytrip.com/");
-		;
-		driver.manage().window().maximize();
+		
+		
+		
+		/*
+		 * ChromeOptions options = new ChromeOptions();
+		 * options.addArguments("--remote-allow-origins=*");
+		 * System.setProperty("webdriver.chrome.driver",
+		 * "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		 * WebDriver driver = new ChromeDriver(options);
+		 * driver.navigate().to("https://www.makemytrip.com/"); ;
+		 * driver.manage().window().maximize();
+		 */
+		 
+		 
+		
+		
 		// click on currency and language
 		driver.findElement(By.xpath("//li[@class='makeFlex column makeRelative vrtlCenter conCurLang geoSwitcher']"))
 				.click();
@@ -95,12 +113,14 @@ public class makeMyTrip {
 
 	@Test(priority=3)
 	public void trip_type() {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.makemytrip.com/");
-		;
-		driver.manage().window().maximize();
+		
+		 ChromeOptions options = new ChromeOptions();
+		  options.addArguments("--remote-allow-origins=*");
+		  System.setProperty("webdriver.chrome.driver",
+		  "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		  WebDriver driver = new ChromeDriver(options);
+		  driver.navigate().to("https://www.makemytrip.com/"); ;
+		  driver.manage().window().maximize();
 
 		driver.findElement(By.xpath("//ul[@class='fswTabs latoBlack greyText']//li[1]")).click();
 
@@ -135,13 +155,19 @@ public class makeMyTrip {
 
 	@Test(priority=4)
 	public void Select_a_Fair_Type() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.makemytrip.com/");
-		;
-		driver.manage().window().maximize();
-
+		
+		
+		/*
+		 * ChromeOptions options = new ChromeOptions();
+		 * options.addArguments("--remote-allow-origins=*");
+		 * System.setProperty("webdriver.chrome.driver",
+		 * "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		 * WebDriver driver = new ChromeDriver(options);
+		 * driver.navigate().to("https://www.makemytrip.com/"); ;
+		 * driver.manage().window().maximize();
+		 */
+		  
+		  
 		js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,200)", " ");
 
@@ -177,12 +203,18 @@ public class makeMyTrip {
 
 	@Test(priority=5)
 	public void close_addvertisement() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.makemytrip.com/");
-		;
-		driver.manage().window().maximize();
+		
+		
+		  ChromeOptions options = new ChromeOptions();
+		  options.addArguments("--remote-allow-origins=*");
+		  System.setProperty("webdriver.chrome.driver",
+		  "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		  WebDriver driver = new ChromeDriver(options);
+		  driver.navigate().to("https://www.makemytrip.com/"); ;
+		  driver.manage().window().maximize();
+		 
+		  
+		  
 		boolean add = driver
 				.findElement(
 						By.xpath("//div[@class='langCard  fixedCard bounceAni']//child::span[@class='langCardClose']"))
@@ -201,12 +233,16 @@ public class makeMyTrip {
 
 	@Test(priority=6)
 	public void oneway_from_dropdown() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.makemytrip.com/");
-		;
-		driver.manage().window().maximize();
+
+		/*
+		 * ChromeOptions options = new ChromeOptions();
+		 * options.addArguments("--remote-allow-origins=*");
+		 * System.setProperty("webdriver.chrome.driver",
+		 * "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		 * WebDriver driver = new ChromeDriver(options);
+		 * driver.navigate().to("https://www.makemytrip.com/"); ;
+		 * driver.manage().window().maximize();
+		 */
 
 		Actions act1 = new Actions(driver);
 
@@ -247,12 +283,15 @@ public class makeMyTrip {
 
 	@Test(priority=7)
 	public void select_city_oneway_from_dropdown() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.makemytrip.com/");
-		;
-		driver.manage().window().maximize();
+		
+
+		 ChromeOptions options = new ChromeOptions();
+		  options.addArguments("--remote-allow-origins=*");
+		  System.setProperty("webdriver.chrome.driver",
+		  "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		  WebDriver driver = new ChromeDriver(options);
+		  driver.navigate().to("https://www.makemytrip.com/"); ;
+		  driver.manage().window().maximize();
 
 		WebElement from_city = driver.findElement(By.xpath("//label[@for='fromCity']"));
 		from_city.click();
@@ -276,12 +315,14 @@ public class makeMyTrip {
 
 	@Test(priority=8)
 	public void select_oneway_date() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.makemytrip.com/");
-		;
-		driver.manage().window().maximize();
+
+		 ChromeOptions options = new ChromeOptions();
+		  options.addArguments("--remote-allow-origins=*");
+		  System.setProperty("webdriver.chrome.driver",
+		  "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		  WebDriver driver = new ChromeDriver(options);
+		  driver.navigate().to("https://www.makemytrip.com/"); ;
+		  driver.manage().window().maximize();
 
 		Thread.sleep(4000);
 		// click on one way
@@ -343,12 +384,15 @@ public class makeMyTrip {
 
 	@Test(priority=9)
 	public void search_window() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.makemytrip.com/");
-		;
-		driver.manage().window().maximize();
+
+		 ChromeOptions options = new ChromeOptions();
+		  options.addArguments("--remote-allow-origins=*");
+		  System.setProperty("webdriver.chrome.driver",
+		  "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		  WebDriver driver = new ChromeDriver(options);
+		  driver.navigate().to("https://www.makemytrip.com/"); ;
+		  driver.manage().window().maximize();
+		  
 		boolean add = driver
 				.findElement(
 						By.xpath("//div[@class='langCard  fixedCard bounceAni']//child::span[@class='langCardClose']"))
@@ -380,12 +424,15 @@ public class makeMyTrip {
 
 	@Test(priority=10)
 	public void window_handling() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.makemytrip.com/");
-		;
-		driver.manage().window().maximize();
+
+		 ChromeOptions options = new ChromeOptions();
+		  options.addArguments("--remote-allow-origins=*");
+		  System.setProperty("webdriver.chrome.driver",
+		  "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		  WebDriver driver = new ChromeDriver(options);
+		  driver.navigate().to("https://www.makemytrip.com/"); ;
+		  driver.manage().window().maximize();
+		  
 		WebElement new_window = driver.findElement(By.xpath("//ul[@class='recentSearches']//li[1]"));
 		new_window.click();
 
@@ -487,12 +534,15 @@ public class makeMyTrip {
 	
 	@Test(priority=11)
 	public void window_handling1() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.makemytrip.com/");
-		;
-		driver.manage().window().maximize();
+
+		 ChromeOptions options = new ChromeOptions();
+		  options.addArguments("--remote-allow-origins=*");
+		  System.setProperty("webdriver.chrome.driver",
+		  "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		  WebDriver driver = new ChromeDriver(options);
+		  driver.navigate().to("https://www.makemytrip.com/"); ;
+		  driver.manage().window().maximize();
+		  
 		WebElement new_window = driver.findElement(By.xpath("//ul[@class='recentSearches']//li[1]"));
 		new_window.click();
 		
@@ -537,12 +587,15 @@ public class makeMyTrip {
 	
 	@Test(priority=12)
 	public void multiple_window_handling() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://www.amazon.in/");
-		;
-		driver.manage().window().maximize();
+
+		 ChromeOptions options = new ChromeOptions();
+		  options.addArguments("--remote-allow-origins=*");
+		  System.setProperty("webdriver.chrome.driver",
+		  "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		  WebDriver driver = new ChromeDriver(options);
+		  driver.navigate().to("https://www.makemytrip.com/"); ;
+		  driver.manage().window().maximize();
+		  
 		Thread.sleep(5000);
 
 		WebElement new_window = driver.findElement(By.xpath("//a[text()='Mobiles']"));
@@ -599,12 +652,17 @@ public class makeMyTrip {
 	}
 	@Test(priority=13)
 	public void zerodha() throws Exception {
-		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Shree/Desktop/jar/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://kite.zerodha.com/");
-		;
-		driver.manage().window().maximize();
+		
+
+		 ChromeOptions options = new ChromeOptions();
+		  options.addArguments("--remote-allow-origins=*");
+		  System.setProperty("webdriver.chrome.driver",
+		  "C://Users//Shree//Downloads//chromedriver_win32//chromedriver.exe");
+		  WebDriver driver = new ChromeDriver(options);
+		  driver.navigate().to("https://www.makemytrip.com/"); ;
+		  driver.manage().window().maximize();
+		  
+		  
 		driver.findElement(By.id("userid")).sendKeys("XI5779");
 		driver.findElement(By.id("password")).sendKeys("Omkar@1234");
 		driver.findElement(By.xpath("//button")).click();
@@ -617,6 +675,9 @@ public class makeMyTrip {
 	
 	@Test(priority=14)
 	public void lauch_firefox() {
+		
+		//FirefoxOptions options = new FirefoxOptions();
+		 // options.addArguments("--remote-allow-origins=*");
 		System.setProperty("webdriver.gecko.driver",
 				"C:/Users/Shree/Desktop/jar/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
