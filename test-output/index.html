@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Shree\AppData\Local\Temp\testng-eclipse-1926387731\testng-customsuite.xml</span>
+                    <span>C:\Users\Shree\AppData\Local\Temp\testng-eclipse--610280554\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.makeMyTrip.makeMyTrip" class="method navigator-link" hash-for-method="close_addvertisement">close_addvertisement</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.amazon.amazon_prac" class="method navigator-link" hash-for-method="jbk_lauch_url">jbk_lauch_url</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -122,39 +122,34 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.makeMyTrip.makeMyTrip</span>
+              <span class="class-name">com.amazon.amazon_prac</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="close_addvertisement">
-                  </a> <!-- close_addvertisement -->
-                  <span class="method-name">close_addvertisement</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;langCard  fixedCard bounceAni&apos;]//child::span[@class=&apos;langCardClose&apos;]&quot;}
-  (Session info: chrome=111.0.5563.65)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+                  <a name="jbk_lauch_url">
+                  </a> <!-- jbk_lauch_url -->
+                  <span class="method-name">jbk_lauch_url</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 111
+Current browser version is 113.0.5672.93 with binary path C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 Build info: version: &apos;4.1.3&apos;, revision: &apos;7b1ebf28ef&apos;
 System info: host: &apos;VINSYSLT0170&apos;, ip: &apos;192.168.35.102&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.16.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a18213d99e84f7eab21160f83002c7bc, findElement {using=xpath, value=//div[@class=&apos;langCard  fixedCard bounceAni&apos;]//child::span[@class=&apos;langCardClose&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\Shree\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52338}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52338/devtoo..., se:cdpVersion: 111.0.5563.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a18213d99e84f7eab21160f83002c7bc
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
-	at com.makeMyTrip.makeMyTrip.close_addvertisement(makeMyTrip.java:219)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:248)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:164)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:106)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:93)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
+	at com.amazon.amazon_prac.jbk_lauch_url(amazon_prac.java:30)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -192,7 +187,7 @@ Session ID: a18213d99e84f7eab21160f83002c7bc
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Shree\AppData\Local\Temp\testng-eclipse-1926387731\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Shree\AppData\Local\Temp\testng-eclipse--610280554\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -201,11 +196,7 @@ Session ID: a18213d99e84f7eab21160f83002c7bc
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.makeMyTrip.makeMyTrip&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;close_addvertisement&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.makeMyTrip.makeMyTrip --&gt;
+      &lt;class name=&quot;com.amazon.amazon_prac&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -247,14 +238,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'close_addvertisement')
-data.setCell(0, 2, 'com.makeMyTrip.makeMyTrip')
-data.setCell(0, 3, 7167);
+data.setCell(0, 1, 'jbk_lauch_url')
+data.setCell(0, 2, 'com.amazon.amazon_prac')
+data.setCell(0, 3, 5758);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -269,40 +260,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">13 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.makeMyTrip.makeMyTrip</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">window_handling</span>
-                <br/>
-                <span class="ignored-method-name">loginpage</span>
-                <br/>
-                <span class="ignored-method-name">window_handling1</span>
-                <br/>
-                <span class="ignored-method-name">multiple_window_handling</span>
-                <br/>
-                <span class="ignored-method-name">select_oneway_date</span>
-                <br/>
-                <span class="ignored-method-name">oneway_from_dropdown</span>
-                <br/>
-                <span class="ignored-method-name">lauch_firefox</span>
-                <br/>
-                <span class="ignored-method-name">zerodha</span>
-                <br/>
-                <span class="ignored-method-name">search_window</span>
-                <br/>
-                <span class="ignored-method-name">currencypage</span>
-                <br/>
-                <span class="ignored-method-name">select_city_oneway_from_dropdown</span>
-                <br/>
-                <span class="ignored-method-name">Select_a_Fair_Type</span>
-                <br/>
-                <span class="ignored-method-name">trip_type</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -311,11 +271,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.makeMyTrip.makeMyTrip</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.amazon.amazon_prac</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">close_addvertisement</span>
+                <span class="method-name">jbk_lauch_url</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

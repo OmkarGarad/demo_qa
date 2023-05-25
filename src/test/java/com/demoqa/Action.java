@@ -28,6 +28,7 @@ public class Action {
 		driver.get("https://demoqa.com/");
 		driver.manage().window().maximize();
 		
+		
 	Actions act = new Actions(driver);
 	WebElement move = driver.findElement(By.xpath("//div[@class='home-banner']")); 
 	System.out.println(move.getLocation());

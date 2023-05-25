@@ -3,6 +3,11 @@ package captcha_read_write;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 import javax.imageio.ImageIO;
 
@@ -31,41 +36,83 @@ JavascriptExecutor js;
 
 
 	@Test
-  public void f() throws InterruptedException {
+  public void f() throws InterruptedException, Exception {
 		
 		driver.get("https://computerizationmhada.vinsys.live/login");
+		
+		
 		Thread.sleep(2000);
 		driver.findElement(By.name("email")).sendKeys("ree-dye@mhada.com");
 		
 		driver.findElement(By.id("password")).sendKeys("12345678");
 		
 		Thread.sleep(2000);
-		driver.findElements(By.className("MuiTypography-button")).get(3).click();
-		Thread.sleep(1000);
-		String otp = driver.findElement(By.tagName("form")).getText();
-		System.out.println(otp);
-		otp = otp.substring(35, 42);
-		driver.findElement(By.id("loginOtp")).sendKeys(otp);
 		
-		while (!driver.findElement(By.tagName("button")).isEnabled())
+	
+		String currentUrl = driver.getCurrentUrl();
+
+		URL url = new URL(currentUrl);
+		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+		int statusCode = connection.getResponseCode();
+
+		
+		while (driver.findElement(By.id("captcha")).getText().isEmpty())
 			
 		{
-			js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,200)", " ");
-			driver.findElements(By.className("MuiTypography-button")).get(4).click();
+			driver.findElement(By.id("refresh")).click();
+			
 			downloadImage();
+			
 			String captcha = extractCaptcha();
-			Thread.sleep(3000);
-			js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,200)", " ");
-			driver.findElement(By.id("captcha")).clear();
-			driver.findElement(By.id("captcha")).sendKeys(captcha);
-			Thread.sleep(2000);			
-		}
-		driver.findElement(By.tagName("button")).click();
+			
 		
-		Thread.sleep(10000);
+			
+			driver.findElement(By.id("captcha")).clear();
+			
+			driver.findElement(By.id("captcha")).sendKeys(captcha);
+			
+			Thread.sleep(2000);			
+	
+			}
+		System.out.println("click submit");
+		driver.findElement(By.id("m_login_signin_submit")).click();	
+		Thread.sleep(3000);
+		System.out.println("click submit");
+		
+		
+		while(statusCode >= 200 && statusCode < 300) {
+			
+			Thread.sleep(2000);
+			
+			driver.navigate().back();
+			
+			driver.findElement(By.name("email")).sendKeys("ree-dye@mhada.com");
+			
+			driver.findElement(By.id("password")).sendKeys("12345678");
+			
+			Thread.sleep(2000);
+
+			driver.findElement(By.id("refresh")).click();
+			
+			downloadImage();
+			
+			String captcha = extractCaptcha();
+			
+		
+			
+			driver.findElement(By.id("captcha")).clear();
+			
+			driver.findElement(By.id("captcha")).sendKeys(captcha);
+			
+		
+		
+		
+		}
+		
 	}
+	
+	
 	
   
 	private String extractCaptcha() {
@@ -77,14 +124,16 @@ JavascriptExecutor js;
 	  
 	            // the path of your tess data folder
 	            // inside the extracted file
-	            String text
-	                = tesseract.doOCR(new File("C:/Users/Shree/Desktop/captcha.jpeg"));
+	            String text = tesseract.doOCR(new File("C:/Users/Shree/Desktop/captcha_mhada_01.png"));
 	  
 	            // path of your image file
 	            System.out.println("check1");
+	            
 	            System.out.print(text);
+	            
 	            System.out.println("check2");
 	            return text;
+	            
 	        }
 	        catch(TesseractException e) {
 	            e.printStackTrace();
@@ -97,15 +146,22 @@ JavascriptExecutor js;
 	private void downloadImage() {
 		try {
 			System.out.println("check3");
-		     WebElement logo = driver.findElements(By.tagName("img")).get(1);
-		     String logoSRC = logo.getAttribute("src");
-		     String[] baseArr = logoSRC.split(",");
-		     String base64 = baseArr[baseArr.length - 1];
-		     byte[] data = Base64.decode(base64);
-		     ByteArrayInputStream memstream = new ByteArrayInputStream(data);
-		     BufferedImage saveImage = ImageIO.read(memstream);
-		     ImageIO.write(saveImage, "jpeg", new File("C:/Users/Shree/Desktop/captcha.jpeg"));
+		     WebElement logo = driver.findElements(By.tagName("img")).get(2);
 		     
+		     String logoSRC = logo.getAttribute("src");
+
+		     URL url = new URL(logoSRC);
+		     InputStream is = url.openStream();
+
+		     FileOutputStream fos = new FileOutputStream("C:/Users/Shree/Desktop/captcha_mhada_01.png");
+		     byte[] buffer = new byte[4096];
+		     int length;
+		     while ((length = is.read(buffer)) != -1) {
+		         fos.write(buffer, 0, length);
+		     }
+		     is.close();
+		     fos.close();
+
 		     } catch (Exception e) {
 		    	 System.out.println("in errror");
 		        e.printStackTrace();

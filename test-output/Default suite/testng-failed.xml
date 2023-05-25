@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.makeMyTrip.makeMyTrip">
+      <class name="com.amazon.amazon_prac">
         <methods>
-          <include name="close_addvertisement"/>
+          <include name="jbk_lauch_url"/>
         </methods>
-      </class> <!-- com.makeMyTrip.makeMyTrip -->
+      </class> <!-- com.amazon.amazon_prac -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

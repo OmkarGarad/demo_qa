@@ -13,6 +13,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -111,8 +112,10 @@ JavascriptExecutor js;
 
 	@BeforeMethod
   public void beforeMethod() {
+		ChromeOptions opt = new ChromeOptions();
+		opt.addArguments("--remote-allow-origins=*");
 	  System.setProperty("webdriver.chrome.driver","C:/Users/Shree/Desktop/jar/chromedriver.exe");
-	  driver = new ChromeDriver();
+	  driver = new ChromeDriver(opt);
 	  driver.manage().window().maximize();
   }
   

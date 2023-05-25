@@ -42,6 +42,7 @@ public void AmazonBrokenLink() {
 	
 	
 	  List<WebElement> links = driver.findElements(By.tagName("a"));
+	
 	  
 	  Iterator<WebElement> it = links.iterator();
 		  
