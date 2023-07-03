@@ -26,10 +26,14 @@ public class amazon_prac {
 	public void  jbk_lauch_url() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
-		System.setProperty("webdriver.chrome.driver","C:/Users/Shree/Desktop/jar/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C://Users//Shree//Desktop//jar//chromedriver_win32//chromedriver.exe");
 		 driver = new ChromeDriver(options);
 		 
 		 driver.get("https://www.tutorialspoint.com/about/about_careers.htm");
+		 
+		 driver.manage().window().maximize();
+		 
+		 System.out.println("launch");
 		 
 		 //String l = Keys.chord(Keys.CONTROL,Keys.ENTER);
 		 String l = Keys.chord(Keys.CONTROL,"T");

@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
@@ -95,11 +96,19 @@ public class mhada_TestBase {
 	  public void AppLogin() throws InterruptedException
 	  {
 	  
+		  
+		
+		  
 		System.out.println("dsnbf");
 		Thread.sleep(3000);
+		
 		driver.findElement(By.name("email")).sendKeys("testarcht@vinsys.com");
 		 System.out.println("email inserted");
-		 driver.findElement(By.id("password")).sendKeys("12345678");
+		 
+		 
+		 WebElement  pass = driver.findElement(By.id("password"));
+		 pass.sendKeys("12345678");
+		   
 		 System.out.println("password inserted");
 		 String captchaVal = JOptionPane.showInputDialog("Please enter the captcha value:");
 		 driver.findElement(By.name("captcha")).sendKeys(captchaVal);
@@ -108,6 +117,11 @@ public class mhada_TestBase {
 		 System.out.println("login button clicked");
 	}
 	  
+	private Object with(By tagName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	@Test(priority=3)
 	public void close(){
 		System.out.println("CLOSED THE DRIVER");
