@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.amazon.amazon_prac">
+      <class name="captcha_read_write.kp_login">
         <methods>
-          <include name="jbk_lauch_url"/>
+          <include name="select_city_oneway_from_dropdown"/>
         </methods>
-      </class> <!-- com.amazon.amazon_prac -->
+      </class> <!-- captcha_read_write.kp_login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
